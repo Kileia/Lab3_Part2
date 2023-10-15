@@ -7,5 +7,26 @@
     <title>Lab 3 Part 2</title>
   </head>
 
-  <body></body>
+  <body>
+    <header>
+      <h1>Mt. Pisgah Community College</h1>
+      <p>
+        We'll help you determine your cost of tuition. Just input your
+        information and we'll take care of the rest.
+      </p>
+    </header>
+    <h2>Your Information:</h2>
+    <button onclick="begin()">Let's Begin</button>
+    <p id="calculation"></p>
+    <script>
+      function begin() {
+        let outTuition = prompt("Are you an out of state student? (yes or no)");
+        let yourCredits = parseInt(
+          prompt("How many credits are you taking this term?")
+        );
+        let result = calculate(yourCredits, outTuition);
+        document.getElementById("calculation").innerHTML = result;
+      }
+    </script>
+  </body>
 </html>
