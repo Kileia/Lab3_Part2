@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Kileia Riley-->
+    <meta charset="UTF-8" />
+    <script src="difficulty.js"></script>
+    <title>Lab 3 Part 2 (2 of 3)</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Trail Difficulty Rating</h1>
+      <p>Enter the information for a rating.</p>
+    </header>
+    <button onclick="begin()">Enter Here</button>
+    <p id="information"></p>
+    <script>
+      function begin() {
+        let miles = parseInt(prompt("How long is the trail in miles?"));
+        let feet = parseInt(prompt("What is the elevation gain in feet?"));
+        let result = difficulty(miles, feet);
+        document.getElementById("information").innerHTML = result =
+          "Distance: " +
+          miles +
+          " miles <br> Elevation: " +
+          feet +
+          " feet <br>" +
+          result;
+      }
+    </script>
+  </body>
+</html>
