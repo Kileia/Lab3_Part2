@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Kileia Riley-->
+    <meta charset="UTF-8" />
+    <script src="activity.js"></script>
+    <title>Lab 3 Part 2 (3 of 3)</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Trail Types</h1>
+      <p>Choose an activity and we'll give you recommendations.</p>
+    </header>
+    <button onclick="begin()">Let's Start</button>
+    <p id="activityType"></p>
+    <script>
+      function begin() {
+        let answer = prompt(
+          "Which activity: Hiking, Bike Touring, Horseback Riding, or Mountain Biking"
+        );
+        let result = activity(answer);
+        document.getElementById("activityType").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
